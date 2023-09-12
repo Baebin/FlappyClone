@@ -19,7 +19,10 @@ public class BirdJump : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
+        {
+            GetComponent<AudioSource>().Play();
             rb.velocity = Vector2.up * jumpPower;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
